@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: mlacrtest.azurecr.io/flask:78
+        image: mlacrtest.azurecr.io/flask
         ports:
         - containerPort: 5001
 ---

@@ -1,4 +1,3 @@
-[[_TOC_]]
 
 # **How to Dockerize an Aplication**
 ### Important files
