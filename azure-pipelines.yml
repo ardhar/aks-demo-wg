@@ -37,3 +37,18 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+          latest
+- stage: copy
+  dependsOn: build
+  jobs:
+    - job: copy
+      displayName: copy manifest files
+      pool:
+       vmImage: $(vmImageName)
+      steps:
+      - task: CopyFiles@2
+        inputs:
+          SourceFolder: '$(Agent.BuildDirectory)/Day-1/'
+          Contents: '*.yaml'
+          TargetFolder: '$(build.artifactstagingdirectory)'
+   
