@@ -1,6 +1,6 @@
 ## Shared Disk with AKS
 1. [Shared Disk](https://www.youtube.com/watch?v=BRNelyXLQ4o) introduction by Azure PM.
-2. How [Shared Managed Disk](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared#premium-ssd-ranges) works.
+2. How [Shared Managed Disk](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared#premium-ssd-ranges) works. <br>
  `
     VMs in the cluster can read or write to their attached disk based on the reservation chosen by the clustered application using SCSI Persistent Reservations (SCSI PR). SCSI PR is an industry standard used by applications running on Storage Area Network (SAN) on-premises. Enabling SCSI PR on a managed disk allows you to migrate these applications to Azure as-is.
 
