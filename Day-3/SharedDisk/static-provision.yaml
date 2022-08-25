@@ -1,0 +1,31 @@
+# Use a Statically Provisioned Azure Shared Disk
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: azuredisk-shared-block
+spec:
+  capacity:
+    storage: "256Gi" # 256 is the minimum size allowed for shared disk
+  volumeMode: Block # PV and PVC volumeMode must be 'Block'
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  azureDisk:
+    kind: Managed
+    diskURI: /subscriptions/<subscription>/resourcegroups/<group>/providers/Microsoft.Compute/disks/<disk-name>
+    diskName: <disk-name>
+    cachingMode: None # Caching mode must be 'None'
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-azuredisk-managed
+spec:
+  resources:
+    requests:
+      storage: 256Gi
+  volumeMode: Block
+  accessModes:
+    - ReadWriteMany
+  volumeName: azuredisk-shared-block # The name of the PV (above)

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: deployment-azuredisk
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+      name: deployment-azuredisk
+    spec:
+      containers:
+        - name: deployment-azuredisk
+          image: mcr.microsoft.com/oss/nginx/nginx:1.17.3-alpine
+          volumeDevices:
+            - name: azuredisk
+              devicePath: /dev/sdx
+      volumes:
+        - name: azuredisk
+          persistentVolumeClaim:
+            claimName: pvc-azuredisk
