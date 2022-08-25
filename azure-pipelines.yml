@@ -42,7 +42,7 @@ stages:
   dependsOn: build
   jobs:
     - job: copy
-      displayName: copy manifest files
+      displayName: copy manifest files and publish artifacts
       pool:
        vmImage: $(vmImageName)
       steps:
