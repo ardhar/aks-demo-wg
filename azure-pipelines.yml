@@ -37,7 +37,6 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-          latest
 - stage: copy
   dependsOn: build
   jobs:
