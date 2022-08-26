@@ -6,7 +6,7 @@ spec:
   nodeSelector:
     "kubernetes.io/os": linux
   containers:
-    - image: mcr.microsoft.com/oss/nginx/nginx:1.19.5
+    - image: nginx
       name: nginx-azurefile
       command:
         - "/bin/bash"
