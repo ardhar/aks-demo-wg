@@ -19,6 +19,9 @@
 # Command to check if the image is created
 <i> docker image ls </i>
 
+# Running container from the image
+<i> docker container run -p 8080:80 [docker_image] </i>
+
 # Pushing the Image to Azure Container Registry
 <i> docker tag apptest1:latest <acr_name>.azurecr.io/image:tag </i> <br>
 <i> docker push <acr_name>.azurecr.io/image:tag </i>
