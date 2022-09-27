@@ -1,7 +1,14 @@
 
   Id     Duration CommandLine
   --     -------- -----------
-   1       
+   1        0.688 try { . "c:\Users\ardhar\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\termin…
+   2       14.435 az aks get-credentials --resource-group mi-migration2 --name mi-migration2
+   3        2.016 cler
+   4        0.172 clear
+   5       13.943 az identity create --name arindamuseridentity --resource-group mi-migration2 --debug
+   6        0.003 clear
+   7     2:40.085 az aks update --resource-group mi-migration2 --name mi-migration2 --enable-managed-identity --assign-identity '…
+   8        0.003 clear
    9       10.161 az aks show -g mi-migration2 -n mi-migration2 --query "servicePrincipalProfile"
   10        2.884 kubectl.exe get nodes
   11        0.830 kubectl.exe run nginx --image=nginx
@@ -94,4 +101,25 @@
   98        1.075 kubectl.exe get pods
   99        1.079 kubectl.exe get pods
  100        0.190 history
+ 101        0.028 history > history.txt
+ 102        0.002 clear
+ 103        0.002 clear
+ 104        1.959 kubectl.exe get deploy
+ 105        1.103 kubectl.exe get rs
+ 106        2.508 kubectl.exe get svc
+ 107        1.160 kubectl.exe get pods
+ 108        2.273 kubectl.exe get pods -o wide
+ 109        1.555 kubectl.exe describe svc flask-service
+ 110        0.002 clear
+ 111        0.971 kubectl.exe get svc
+ 112        1.082 kubectl.exe get pods
+ 113        0.111 kubectl.exe -it nginx -- nslookup flask-service.default.svc.cluster.local
+ 114        2.679 kubectl.exe exec -it nginx -- nslookup flask-service.default.svc.cluster.local
+ 115        2.542 kubectl.exe exec -it nginx -- nslookup flask-service.default
+ 116        1.131 kubectl.exe get svc -n kube-system
+ 117        1.101 kubectl.exe get pods
+ 118        1.157 kubectl.exe get pods -o wide
+ 119        3.740 kubectl.exe exec -it nginx -- nslookup 10-244-4-7.default.pod
+ 120        2.581 kubectl.exe exec -it nginx -- cat /etc/resolv.conf
+ 121        1.253 kubectl.exe get cm -n kube-system
 
