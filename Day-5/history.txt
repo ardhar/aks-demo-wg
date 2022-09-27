@@ -1,14 +1,6 @@
 
   Id     Duration CommandLine
   --     -------- -----------
-   1        0.688 try { . "c:\Users\ardhar\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\termin…
-   2       14.435 az aks get-credentials --resource-group mi-migration2 --name mi-migration2
-   3        2.016 cler
-   4        0.172 clear
-   5       13.943 az identity create --name arindamuseridentity --resource-group mi-migration2 --debug
-   6        0.003 clear
-   7     2:40.085 az aks update --resource-group mi-migration2 --name mi-migration2 --enable-managed-identity --assign-identity '…
-   8        0.003 clear
    9       10.161 az aks show -g mi-migration2 -n mi-migration2 --query "servicePrincipalProfile"
   10        2.884 kubectl.exe get nodes
   11        0.830 kubectl.exe run nginx --image=nginx
