@@ -1,0 +1,97 @@
+
+  Id     Duration CommandLine
+  --     -------- -----------
+   1       
+   9       10.161 az aks show -g mi-migration2 -n mi-migration2 --query "servicePrincipalProfile"
+  10        2.884 kubectl.exe get nodes
+  11        0.830 kubectl.exe run nginx --image=nginx
+  12        0.864 kubectl.exe get pods
+  13        0.834 kubectl.exe get pods
+  14        0.863 kubectl.exe get pods
+  15        4.775 kubectl.exe exec -it nginx -- apt-get update 
+  16        8.428 kubectl.exe exec -it nginx -- apt-get install dnsutils
+  17        0.018 clear
+  18        0.893 kubectl.exe get pods
+  19        2.268 kubectl.exe get deploy
+  20        0.875 kubectl.exe get pods
+  21        0.129 kubectl.exe expose --help
+  22        0.003 clear
+  23        1.515 kubectl.exe create -f C:\arindam-data\my-docs\aks-sme-work\workload\demo-wg\Day-1\app.yaml
+  24        2.063 kubectl.exe get pods
+  25        1.110 kubectl.exe get events
+  26        0.003 clear
+  27     1:59.905 az aks update -g mi-migration2 -n mi-migration2 --attach-acr wgtestacr --debug
+  28        1.187 kubectl.exe get pods
+  29       18.664 kubectl.exe delete -f C:\arindam-data\my-docs\aks-sme-work\workload\demo-wg\Day-1\app.yaml
+  30        0.856 kubectl.exe get pods
+  31        1.443 kubectl.exe create -f C:\arindam-data\my-docs\aks-sme-work\workload\demo-wg\Day-1\app.yaml
+  32        1.068 kubectl.exe get pods
+  33        1.086 kubectl.exe get pods
+  34        0.873 kubectl.exe get svc
+  35        0.982 kubectl.exe get svc
+  36        3.948 kubectl.exe exec -it nginx -- nslookup flask-service.default
+  37        1.097 kubectl.exe get svc -n kube-system
+  38        2.558 kubectl.exe exec -it nginx -- nslookup flask-service
+  39        2.652 kubectl.exe exec -it nginx -- nslookup flask-service.default.svc
+  40        0.004 clear
+  41        0.021 cd .\Day-4\
+  42        0.005 clear
+  43        2.126 kubectl.exe get role
+  44        1.395 kubectl.exe get clusterrole
+  45        2.423 kubectl.exe get clusterrolebinding
+  46        1.227 kubectl.exe describe clusterrole system:basic-user 
+  47        4.149 kubectl.exe get pods
+  48        0.002 clear
+  49        1.054 kubectl.exe get pods
+  50        1.224 kubectl.exe create -f C:\arindam-data\my-docs\aks-sme-work\workload\demo-wg\Day-3\AzureFile\pvc-azurefile-csi.y…
+  51        1.122 kubectl.exe create -f C:\arindam-data\my-docs\aks-sme-work\workload\demo-wg\Day-3\AzureFile\nginx-pod-azurefile…
+  52        1.061 kubectl.exe get pods
+  53        0.004 clear
+  54        1.081 kubectl.exe get pods
+  55        0.005 clear
+  56        0.002 clear
+  57        2.493 kubectl.exe run redis --image=redis --dry-run=client -o yaml >> redispod.yaml
+  58        0.003 clear
+  59        0.020 cd ..
+  60        0.019 cd .\Day-5\
+  61        0.055 ls
+  62        0.004 clear
+  63        0.003 clear
+  64        0.003 clear
+  65        0.003 clear
+  66        0.141 kubectl.exe
+  67        2.179 kubectl.exe api-resources
+  68        0.128 kubectl.exe api-resources deployments explain
+  69        1.181 kubectl.exe explain deployments
+  70        1.234 kubectl.exe get pod
+  71        2.063 kubectl.exe explain nginx
+  72        0.020 clear
+  73        1.783 kubectl.exe api-resources
+  74        0.010 clear
+  75        1.282 kubectl.exe get pods
+  76        0.960 kubectl.exe get deploy
+  77        0.871 kubectl.exe get sa
+  78        0.956 kubectl.exe get secret
+  79        0.002 clear
+  80        0.929 kubectl.exe get deployu
+  81        0.892 kubectl.exe get deploy
+  82        1.581 kubectl.exe describe deploy 
+  83        0.002 clear
+  84        0.013 clear
+  85     1:13.834 kubectl.exe edit deploy
+  86        0.002 clear
+  87        1.178 kubectl.exe get pods
+  88     1:14.515 kubectl.exe edit pod flask-deployment-69b8d8dc57-7nctb
+  89        1.221 kubectl.exe get ds
+  90        1.522 kubectl.exe get ds -n kube-system
+  91        1.145 kubectl.exe get nodes
+  92        0.003 clear
+  93        1.217 kubectl.exe get pods -n kube-system
+  94        1.072 kubectl.exe get pods
+  95        0.002 clear
+  96        1.834 kubectl.exe run newnginx --image=nginx --dry-run=client -o yaml >> newnginx.yaml
+  97        2.323 kubectl.exe create -f C:\arindam-data\my-docs\aks-sme-work\workload\demo-wg\Day-5\newnginx.yaml
+  98        1.075 kubectl.exe get pods
+  99        1.079 kubectl.exe get pods
+ 100        0.190 history
+
