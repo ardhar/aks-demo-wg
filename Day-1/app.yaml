@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: wgtestacr.azurecr.io/wgtestnew
+        image: wgtestacr.azurecr.io/flask
         ports:
         - containerPort: 5001
 ---
